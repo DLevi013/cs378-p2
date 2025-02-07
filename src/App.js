@@ -1,5 +1,6 @@
 import './App.css';
 import MenuItem from './components/MenuItem';
+import TopInfo from './components/TopInfo';
 
 
 // import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
@@ -81,18 +82,25 @@ const menuItems = [
   }
 ];
 
+const allHeadingInfo = [
+    {
+      
+      houseLogo: `${process.env.PUBLIC_URL}/images/houseLogo.png`,
+      details: 'Opened and Established in Texas',
+      restaurant: 'Sushi House: Authentic Japanese Cuisine',
+      title: 'Menu',
+
+    }
+];
+
 
 
 function App() {
   return (
     <div>
-      <img src={`${process.env.PUBLIC_URL}/images/houselogo.png`} className="houseLogo" alt="House Logo" />
 
-
-      <h1>Authentic Japanese Cuisine</h1>
-      <h2>Opened and Established in Texas</h2>
-
-      <h2 class = "title">Menu</h2>
+      {allHeadingInfo.map((info) => (<TopInfo houseLogo = {info.houseLogo} details={info.details} 
+        restaurant={info.restaurant} title={info.title}/>))}
       <div className="menu">
         {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
         {/* <MenuItem title={menuItems[0].title} />  */}
