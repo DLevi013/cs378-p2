@@ -85,7 +85,7 @@ const menuItems = [
 const allHeadingInfo = [
     {
       
-      houseLogo: `${process.env.PUBLIC_URL}/images/houseLogo.png`,
+      houseLogo: `${process.env.PUBLIC_URL}/images/houselogo.png`,
       details: 'Opened and Established in Texas',
       restaurant: 'Sushi House: Authentic Japanese Cuisine',
       title: 'Menu',
